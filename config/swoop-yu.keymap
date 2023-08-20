@@ -44,9 +44,9 @@
         base {
             label = "Base";
             bindings = <
-            &kp Q  &kp W            &kp E      &kp R  &kp T    &kp Y             &kp U             &kp I         &kp O      &kp P
-            &kp A  &kp S            &kp D      &kp F  &kp G    &kp H  &gqt RIGHT_ALT J  &gqt RIGHT_GUI K  &gqt RCTRL L   &kp BSPC
-&gqt LEFT_SHIFT Z  &kt X  &gqt LEFT_ALT C      &kp V  &kp B    &kp N             &kp M         &kp COMMA     &kp SLASH  &kp ENTER
+            &kp Q  &kp W            &kp E      &kp R  &kp T    &kp Y             &kp U             &kp I         &kp O                   &kp P
+            &kp A  &kp S            &kp D      &kp F  &kp G    &kp H  &gqt RIGHT_ALT J  &gqt RIGHT_GUI K  &gqt RCTRL L                &kp BSPC
+&gqt LEFT_SHIFT Z  &kt X  &gqt LEFT_ALT C      &kp V  &kp B    &kp N             &kp M         &kp COMMA     &kp SLASH  &gqt RIGHT_SHIFT ENTER
                                 &kp LCTRL  &kp SPACE  &mo 1    &mo 1             &mo 2        &kp RSHIFT
             >;
 
