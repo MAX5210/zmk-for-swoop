@@ -123,7 +123,7 @@
         base {
             label = "Base";
             bindings = <
-      &kp Q  &kp W           &kp E      &kp R  &kp T    &kp Y            &kp U              &kp I        &kp O            &kp P
+  &ht ESC Q  &kp W           &kp E      &kp R  &kp T    &kp Y            &kp U              &kp I        &kp O            &kp P
       &kp A  &kp S           &kp D      &kp F  &kp G    &kp H  &ht RIGHT_ALT J    &ht RIGHT_GUI K  &ht RCTRL L         &kp BSPC
 &ht LSHFT Z  &kp X  &ht LEFT_ALT C      &kp V  &kp B    &kp N            &kp M          &kp COMMA    &kp SLASH  &ht RSHFT ENTER
                          &kp LCTRL  &kp SPACE  &mo 1    &mo 1            &mo 2  &kp RIGHT_CONTROL
