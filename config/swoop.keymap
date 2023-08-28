@@ -107,6 +107,11 @@
             bindings = <&kp PIPE>;
             key-positions = <14 15>;
         };
+
+        shift_minus {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <15 17>;
+        };
     };
 
     macros {
