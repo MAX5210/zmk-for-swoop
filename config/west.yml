@@ -14,7 +14,7 @@ manifest:
       # remote: zephyr-3
       # revision: zephyr/3.1-upgrade
       remote: ufan
-      revision: encodertest
+      revision: test/encoder
       import: app/west.yml
   self:
     path: config
