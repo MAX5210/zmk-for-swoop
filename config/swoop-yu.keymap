@@ -15,33 +15,29 @@
         gqt: global-quick-tap {
             compatible = "zmk,behavior-hold-tap";
             label = "GLOBAL_QUICK_TAP";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             quick-tap-ms = <180>;
             tapping-term-ms = <200>;
             global-quick-tap;
         };
+
         ltq: ltq {
             compatible = "zmk,behavior-hold-tap";
             label = "LTQ";
-            bindings =
-                <&mo>,
-                <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             global-quick-tap;
             tapping-term-ms = <200>;
             quick-tap-ms = <180>;
         };
+
         ht: ht {
             compatible = "zmk,behavior-hold-tap";
             label = "HT";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -57,10 +53,10 @@
         base {
             label = "Base";
             bindings = <
-           &kp Q  &kp W           &kp E      &kp R  &kp T    &kp Y  &kp U            &kp I      &kp O                      &kp P
-           &kp A  &kp S           &kp D      &kp F  &kp G    &kp H  &kp J  &ht RIGHT_GUI K      &kp L                   &kp BSPC
-&ht LEFT_SHIFT Z  &kt X  &ht LEFT_ALT C      &kp V  &kp B    &kp N  &kp M        &kp COMMA  &kp SLASH  &ht RIGHT_SHIFT BACKSPACE
-                              &kp LCTRL  &kp SPACE  &mo 1    &mo 1  &mo 2        &kp RSHFT
+&kp Q             &kp W  &kp E           &kp R      &kp T    &kp Y         &kp U  &kp I            &kp O      &kp P
+&kp A             &kp S  &kp D           &kp F      &kp G    &kp H         &kp J  &ht RIGHT_GUI K  &kp L      &kp BSPC
+&ht LEFT_SHIFT Z  &kt X  &ht LEFT_ALT C  &kp V      &kp B    &kp N         &kp M  &kp COMMA        &kp SLASH  &ht RIGHT_SHIFT BACKSPACE
+                         &kp LCTRL       &kp SPACE  &mo 1    &ltq 1 SPACE  &mo 2  &kp RSHFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -69,10 +65,10 @@
         number {
             label = "NUMBER";
             bindings = <
-  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5     &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-         &kp A         &kp S         &kp D         &kp F         &kp G         &kp SEMI     &kp MINUS     &kp EQUAL       &kp SQT      &kp BSPC
-&kp LEFT_SHIFT         &kp X       &kp ESC       &kp DEL       &kp TAB    &kp BACKSLASH      &kp LBKT       &kp DOT      &kp RBKT     &kp ENTER
-                                    &trans     &kp SPACE        &trans           &trans        &trans        &trans
+&kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+&kp A           &kp S         &kp D         &kp F         &kp G           &kp SEMI       &kp MINUS     &kp EQUAL     &kp SQT       &kp BSPC
+&kp LEFT_SHIFT  &kp X         &kp ESC       &kp DEL       &kp TAB         &kp BACKSLASH  &kp LBKT      &kp DOT       &kp RBKT      &kp ENTER
+                              &trans        &kp SPACE     &trans          &trans         &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp B A>;
@@ -81,10 +77,10 @@
         f_media {
             label = "MEDIA";
             bindings = <
-      &kp F1        &kp F2        &kp F3      &kp F4   &kp F5        &kp F6      &kp F7      &kp F8          &kp F9    &kp F10
-    &kp CAPS        &trans      &kp HOME     &kp END  &kp F11     &kp GRAVE  &kp C_PREV  &kp C_NEXT    &kp UP_ARROW  &kp RIGHT
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &kp F12    &kp C_MUTE  &kp C_PLAY    &kp LEFT  &kp DOWN_ARROW     &trans
-                                  &trans      &trans   &trans        &trans      &trans      &trans
+&kp F1        &kp F2        &kp F3        &kp F4      &kp F5     &kp F6      &kp F7      &kp F8      &kp F9          &kp F10
+&kp CAPS      &trans        &kp HOME      &kp END     &kp F11    &kp GRAVE   &kp C_PREV  &kp C_NEXT  &kp UP_ARROW    &kp RIGHT
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &kp F12    &kp C_MUTE  &kp C_PLAY  &kp LEFT    &kp DOWN_ARROW  &trans
+                            &trans        &trans      &trans     &trans      &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
@@ -93,10 +89,10 @@
         symbol {
             label = "SYMBOL";
             bindings = <
-     &kp EXCL         &kp AT          &kp HASH      &kp DOLLAR  &kp PERCENT          &kp CARET         &kp AMPS         &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
- &kp QUESTION  &kp LESS_THAN  &kp GREATER_THAN   &kp C_AC_FIND       &trans    &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI       &rgb_ug RGB_BRI                 &trans
-&kp C_AC_UNDO   &kp C_AC_CUT     &kp C_AC_COPY  &kp C_AC_PASTE       &trans    &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_SPD       &rgb_ug RGB_BRD                 &trans
-                                        &trans          &trans       &trans    &rgb_ug RGB_EFF  &rgb_ug RGB_EFR           &trans
+&kp EXCL       &kp AT         &kp HASH          &kp DOLLAR      &kp PERCENT    &kp CARET        &kp AMPS         &kp STAR         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp QUESTION   &kp LESS_THAN  &kp GREATER_THAN  &kp C_AC_FIND   &trans         &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI       &trans
+&kp C_AC_UNDO  &kp C_AC_CUT   &kp C_AC_COPY     &kp C_AC_PASTE  &trans         &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_SPD  &rgb_ug RGB_BRD       &trans
+                              &trans            &trans          &trans         &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
@@ -105,10 +101,10 @@
         ble {
             label = "BLE";
             bindings = <
-  &bt BT_SEL 0     &bt BT_SEL 1          &bt BT_SEL 2           &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans
-&kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS        &trans    &trans  &trans  &trans  &trans  &trans
-        &trans           &trans      &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &trans    &trans  &trans  &trans  &trans  &trans
-                                               &trans                 &trans    &bt BT_CLR    &trans  &trans  &trans
+&bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2          &bt BT_SEL 3           &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans
+&kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans          &trans  &trans  &trans  &trans  &trans
+&trans          &trans           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans          &trans  &trans  &trans  &trans  &trans
+                                 &trans                &trans                 &bt BT_CLR      &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
